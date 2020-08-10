@@ -8,9 +8,7 @@ function fetchData(url) {
     if (response.status >= 200 && response.status <= 299) {
       return response.json();
     }
-    if (response.status < 200 || response.status > 299) {
-      return response.error().json();
-    }
+    return response.error().json();
   });
 
   // end -->
